@@ -24,8 +24,6 @@ pip install vidscaler
 
 # from git repo
 pip install git+https://github.com/nbdy/vidscaler
-
-# or download a release from https://github.com/nbdy/vidscaler/releases
 ```
 
 ### .. run
