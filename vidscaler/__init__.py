@@ -108,7 +108,9 @@ class Upscaler:
 
             if preview_event:
                 if preview_event.is_set():
+                    cv2.namedWindow("Preview", cv2.WINDOW_KEEPRATIO)
                     cv2.imshow("Preview", output)
+                    cv2.resizeWindow("Preview", input_video.w, input_video.h)
                     cv2.waitKey(1)
                 else:
                     cv2.destroyAllWindows()
