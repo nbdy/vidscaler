@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "vidscaler"
+version = "2024.4.15"
+requires-python = ">= 3.11"
+authors = [{name = "nbdy"}]
+maintainers = [{name = "nbdy"}]
+readme = "README.md"
+license = {text = "MIT License"}
+keywords = ["video upscaler", "upscaling", "esrgan", "realesrgan", "gui"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "loguru",
+    "numpy",
+    "tqdm",
+    "RealESRGAN @ git+https://github.com/sberbank-ai/Real-ESRGAN.git",
+    "moviepy",
+    "customtkinter",
+    "opencv-python"
+]
+
+[project.urls]
+Homepage = "https://github.com/nbdy/vidscaler"
+Documentation = "https://github.com/nbdy/vidscaler/wiki"
+Repository = "https://github.com/nbdy/vidscaler.git"
+Issues = "https://github.com/nbdy/vidscaler/issues"
+Changelog = "https://github.com/nbdy/vidscaler/blob/main/CHANGELOG.md"
+
+[project.scripts]
+vidscaler = "vidscaler:main"
+
+[project.gui-scripts]
+vidscaler-gui = "vidscaler:gui"
