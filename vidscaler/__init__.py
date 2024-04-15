@@ -6,7 +6,7 @@ from typing import Callable, Optional
 
 import cv2
 import torch
-from RealESRGAN import RealESRGAN
+from real_esrgan.model import RealESRGAN
 from loguru import logger as log
 from moviepy.editor import VideoFileClip
 from numpy import array as np_array, ndarray
