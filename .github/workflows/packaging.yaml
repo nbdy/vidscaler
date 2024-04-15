@@ -17,11 +17,23 @@ jobs:
       with:
         python-version: "3.11"
 
-    - run: pip install -r requirements.txt pyinstaller
-    - run: pyinstaller -F -n vidscaler vidscaler/__main__.py
+    - name: Install UPX
+      uses: crazy-max/ghaction-upx@v3
+      with:
+        install-only: true
+
+    - name: Install pip requirements and pyinstaller
+      run: pip install -r requirements.txt pyinstaller
+
+    - name: Build binary
+      run: pyinstaller -F -n vidscaler vidscaler/__main__.py
+
+    - name: Compress binary
+      run: upx --best --lzma -o dist/vidscaler-cli dist/vidscaler
+
 
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: dist/*
+        files: dist/vidscaler-cli
