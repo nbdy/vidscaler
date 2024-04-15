@@ -135,8 +135,7 @@ class GUI(CTk):
         self.paths[key] = value
         log.info(f"Selected {key} directory: {value}")
 
-        self.entries[key].delete(0, 'end')
-        self.entries[key].insert(0, value)
+        self.entries[key].configure(textvariable=StringVar(value=str(value)))
 
         if key in ["input"]:
             self._update_file_count(key)
