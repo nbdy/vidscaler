@@ -30,6 +30,8 @@ pip install git+https://github.com/nbdy/vidscaler
 
 #### .. gui
 
+![GUI](screenshot/gui.png)
+
 ```shell
 vidscaler-gui
 # or
@@ -63,4 +65,7 @@ options:
 - [ ] start from last stopped point
   - json {"path": "path to video file", "frame": frame} as checkpoint.json?
 - [ ] total runtime estimation
+  - get total frame count of all videos 
+  - avg. each frame processing duration
+  - avgT * frameN = duration
 - [ ] confirmation box when exiting/stopping while upscaling is running
