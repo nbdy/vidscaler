@@ -1,5 +1,7 @@
 # video-upscaler
 
+[![](http://github-actions.40ants.com/nbdy/vidscaler/matrix.svg)](https://github.com/nbdy/vidscaler)
+
 upscale (x2/x4/x8) a video or a directory of videos using the command line
 
 ## dependencies
