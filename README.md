@@ -63,3 +63,4 @@ options:
 - [ ] start from last stopped point
   - json {"path": "path to video file", "frame": frame} as checkpoint.json?
 - [ ] total runtime estimation
+- [ ] confirmation box when exiting/stopping while upscaling is running
