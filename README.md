@@ -56,3 +56,10 @@ options:
   -g, --gui             Run the GUI
   -p, --preview         Enable live preview
 ```
+
+## todo
+
+- [ ] pausing
+- [ ] start from last stopped point
+  - json {"path": "path to video file", "frame": frame} as checkpoint.json?
+- [ ] total runtime estimation
