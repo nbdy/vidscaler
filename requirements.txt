@@ -2,7 +2,7 @@ loguru
 numpy
 tqdm
 numpy
-git+https://github.com/sberbank-ai/Real-ESRGAN.git
+git+https://github.com/nbdy/Real-ESRGAN.git
 moviepy
 opencv-python
 customtkinter

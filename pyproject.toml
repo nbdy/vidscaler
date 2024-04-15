@@ -24,7 +24,7 @@ dependencies = [
     "loguru",
     "numpy",
     "tqdm",
-    "RealESRGAN @ git+https://github.com/sberbank-ai/Real-ESRGAN.git",
+    "real_esrgan @ git+https://github.com/nbdy/Real-ESRGAN.git",
     "moviepy",
     "customtkinter",
     "opencv-python"
