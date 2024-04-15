@@ -23,13 +23,6 @@ jobs:
     - name: Build binary
       run: pyinstaller -F -n vidscaler vidscaler/__main__.py
 
-    - name: Compress binary
-      uses: svenstaro/upx-action@v2
-      with:
-        files: dist/vidscaler
-        args: --best --lzma
-        strip: true
-
     - name: Release
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
